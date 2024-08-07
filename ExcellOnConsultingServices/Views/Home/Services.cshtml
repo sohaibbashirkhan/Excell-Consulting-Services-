@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ExcellOnConsultingServices.ProductService>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/Frontlayout.cshtml";
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row hidden-md-up">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/traning/@item.Picture" />
+                        <div class="card-body">
+                            <h4 class="card-title">@item.Title</h4>
+                            <p class="card-text p-y-1">@item.Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    </div>
+
+</div>

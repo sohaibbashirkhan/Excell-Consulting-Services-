@@ -1,0 +1,43 @@
+﻿@Model ExcellOnConsultingServices.ProductService
+@{
+    ViewBag.Title = "ProductEdit";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+<h1 class="text-center">Edit Your Details </h1>
+<form action="~/Account/ProductEdit" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ID</label>
+        <input type="hidden" value="@Model.ID" class="form-control" placeholder="Enter Your ID " name="ID" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" value="@Model.Title" class="form-control" placeholder="Enter Your Title " name="Title" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">ServiceType</label>
+        <input type="text" value="@Model.ServiceType" class="form-control" placeholder="Enter Your Services Type " name="ServiceType" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descriptions</label>
+        <input type="text" value="@Model.Descriptions" class="form-control" placeholder="Enter Your Descriptions " name="Descriptions" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Picture</label>
+        <input type="file" value="@Model.Picture" class="form-control" placeholder="Add Your Photo" name="Picture" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="text" value="@Model.Price" class="form-control" placeholder="Enter Your Duration" name="Price" />
+        <br>
+    </div>
+
+    <input type="submit" value="Insert Data" class="btn btn-success" />
+</form>

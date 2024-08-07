@@ -1,0 +1,45 @@
+﻿@Model ExcellOnConsultingServices.Training
+@{
+    ViewBag.Title = "TrainingEdit";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1 class="text-center">TrainingEdit</h1>
+<form action="~/Account/TrainingEdit" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="hidden" class="form-control" value="@Model.ID" name="ID" />
+        </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" value="@Model.Title" name="title" />
+        <br>
+    </div>
+  
+    <div class="mb-3">
+        <label class="form-label">Descriptions</label>
+        <input type="text" class="form-control" value="@Model.Descriptions" placeholder="Enter Your Descriptions " name="Descriptions" />
+        <br>
+    </div>
+  
+    <div class="mb-3">
+        <label class="form-label">Picture</label>
+        <input type="file" class="form-control" value="@Model.Picture" placeholder="Add Your Photo" name="Picture" />
+        <br>
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Duration</label>
+        <input type="text" class="form-control" value="@Model.Duration" placeholder="Enter Your Duration" name="Duration" />
+        <br>
+    </div>
+   
+    <div class="mb-3">
+        <label class="form-label">TrainingStatus</label>
+        <input type="text" class="form-control" value="@Model.TrainingStatus" placeholder="Enter Your TrainingStatus" name="TrainingStatus" />
+        <br>
+    </div>
+            <input type="submit" value="Insert Data" class="btn btn-success" />
+</form>
+
+
+

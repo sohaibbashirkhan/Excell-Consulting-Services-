@@ -1,0 +1,39 @@
+﻿@Model ExcellOnConsultingServices.Administrations
+@{
+    ViewBag.Title = "AdminEdit";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1 class="text-center">Edit Your Details </h1>
+<form action="~/Account/AdminEdit" method="post">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ID</label>
+        <input type="hidden" value="@Model.AdminID" class="form-control" placeholder="Enter Your ID " name="AdminID" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" value="@Model.AdminName" class="form-control" placeholder="Enter Your Admin Name " name="AdminName" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">PhoneNo</label>
+        <input type="text" value="@Model.PhoneNo" class="form-control" placeholder="Enter Your Phone No " name="PhoneNo" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" value="@Model.Email" class="form-control" placeholder="Enter Your Email " name="Email" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">AdminPassword</label>
+        <input type="text" value="@Model.AdminPassword" class="form-control" placeholder="Add Your Photo" name="AdminPassword" />
+        <br>
+    </div>
+    <input type="submit" value="Insert Data" class="btn btn-success" />
+</form>
+
+

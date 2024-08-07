@@ -1,0 +1,44 @@
+﻿@Model ExcellOnConsultingServices.Branches;
+@{
+    ViewBag.Title = "BranchEdit";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1 class="text-center">Edit Branch Detail</h1>
+    <form action="~/Account/BranchEdit" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">ID</label>
+            <input type="hidden" value="@Model.BranchID" class="form-control" placeholder="Enter Your ID " name="BranchID" />
+            <br>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" value="@Model.BranchName" class="form-control" placeholder="Enter Your Name " name="BranchName" />
+            <br>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">EmailAddress</label>
+            <input type="text" value="@Model.EmailAddress" class="form-control" placeholder="Enter Your EmailAddress " name="EmailAddress" />
+            <br>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PhoneNumber</label>
+            <input type="text" value="@Model.PhoneNumber" class="form-control" placeholder="Enter Your PhoneNumber " name="PhoneNumber" />
+            <br>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BranchAddress</label>
+            <input type="text" value="@Model.BranchAddress" class="form-control" placeholder="Enter Your BranchAddress" name="BranchAddress" />
+            <br>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <input type="text" value="@Model.City" class="form-control" placeholder="Enter Your City" name="City" />
+            <br>
+        </div>
+
+        <input type="submit" value="Add Data" class="btn btn-success" />
+    </form>
+

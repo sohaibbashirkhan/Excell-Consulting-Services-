@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ExcellOnConsultingServices.Administration>
+
+@{
+    ViewBag.Title = "Administration";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+<h1 class="text-center">Admin Register</h1>
+<div>
+    <a href="~/Account/AdminRegister"><input type="submit" value="Add New" class="btn btn-success" /></a>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdminID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdminName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdminPassword)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdminID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdminName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdminPassword)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "AdminEdit", new { id = item.AdminID }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.AdminID }) |*@
+            @Html.ActionLink("Delete", "AdminDelete", new { id = item.AdminID })
+        </td>
+    </tr>
+}
+
+</table>

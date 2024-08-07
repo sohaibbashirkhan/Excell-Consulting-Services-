@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AddBranch";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+
+<h1 class="text-center">Add New Branch</h1>
+<form action="~/Account/AddBranch" method="post" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter Your Name " name="BranchName" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">EmailAddress</label>
+        <input type="text" class="form-control" placeholder="Enter Your EmailAddress " name="EmailAddress" />
+        <br>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">PhoneNumber</label>
+        <input type="text" class="form-control" placeholder="Enter Your PhoneNumber " name="PhoneNumber" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BranchAddress</label>
+        <input type="text" class="form-control" placeholder="Enter Your BranchAddress" name="BranchAddress" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">City</label>
+        <input type="text" class="form-control" placeholder="Enter Your City" name="City" />
+        <br>
+    </div>
+
+    <input type="submit" value="Insert Data" class="btn btn-success" />
+</form>

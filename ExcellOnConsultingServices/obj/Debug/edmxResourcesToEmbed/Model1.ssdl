@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcellOnServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administration">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="AdminPassword" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Branches">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="255" />
+    <Property Name="BranchAddress" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="255" />
+    <Property Name="StateProvince" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Manager" Type="varchar" MaxLength="255" />
+    <Property Name="OpeningDate" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="ContactMessage" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="HrManagement">
+    <Key>
+      <PropertyRef Name="HRID" />
+    </Key>
+    <Property Name="HRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HRName" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="HRAddress" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="InboundServices">
+    <Key>
+      <PropertyRef Name="InboundID" />
+    </Key>
+    <Property Name="InboundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="255" />
+    <Property Name="Cnic" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="ServiceType" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="logins">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="255" />
+    <Property Name="useremail" Type="varchar" MaxLength="255" />
+    <Property Name="userpass" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="OutboundServices">
+    <Key>
+      <PropertyRef Name="OutboundID" />
+    </Key>
+    <Property Name="OutboundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="255" />
+    <Property Name="Cnic" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="ServiceType" Type="varchar" MaxLength="255" />
+    <Property Name="UserExperience" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductService">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="ServiceType" Type="varchar" MaxLength="255" />
+    <Property Name="Descriptions" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="TeleMarketingServices">
+    <Key>
+      <PropertyRef Name="TeleID" />
+    </Key>
+    <Property Name="TeleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="255" />
+    <Property Name="Cnic" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Country" Type="varchar" MaxLength="255" />
+    <Property Name="ServiceType" Type="varchar" MaxLength="255" />
+    <Property Name="UserStatus" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Training">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="Descriptions" Type="varchar" MaxLength="255" />
+    <Property Name="Picture" Type="varchar" MaxLength="255" />
+    <Property Name="Duration" Type="varchar" MaxLength="255" />
+    <Property Name="TrainingStatus" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="ExcellOnServiceModelStoreContainer">
+    <EntitySet Name="Administration" EntityType="Self.Administration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Branches" EntityType="Self.Branches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HrManagement" EntityType="Self.HrManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InboundServices" EntityType="Self.InboundServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="logins" EntityType="Self.logins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OutboundServices" EntityType="Self.OutboundServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductService" EntityType="Self.ProductService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeleMarketingServices" EntityType="Self.TeleMarketingServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Training" EntityType="Self.Training" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "TaleMarketingServices";
+    Layout = "~/Views/Shared/Frontlayout.cshtml";
+}
+<h1 class="text-center">TaleMarketingServices</h1>
+<form action="~/Home/TaleMarketingServices" method="post">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ServiceName</label>
+        <input type="text" class="form-control" placeholder="Enter Your servicetype " name="ServiceName" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cnic</label>
+        <input type="text" class="form-control " placeholder="enter your Cnic" name="Cnic" />
+        <br>
+    </div>
+    <div class="mb-3">
+
+        <label class="form-label">City</label>
+        <input type="text" class="form-control" placeholder="Enter Your City " name="City" />
+        <br>
+    </div>
+    <div class="mb-3">
+
+        <label class="form-label">PhoneNo</label>
+        <input type="text" class="form-control" placeholder="Enter Your PhoneNo " name="PhoneNo" />
+        <br>
+    </div>
+    @*<div class="mb-3">
+            <label class="form-label">Picture</label>
+            <input type="file" class="form-control" placeholder="Add Your Photo" name="Picture" />
+            <br>
+        </div>*@
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" placeholder="Enter Your Email" name="Email" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Country</label>
+        <input type="text" class="form-control" placeholder="Enter Your Country" name="Country" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">ServiceType</label>
+        <input type="text" class="form-control" placeholder="Enter Your ServiceType" name="ServiceType" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">UserStatus</label>
+        <input type="text" class="form-control" placeholder="Enter Your UserStatus" name="UserStatus" />
+        <br>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="text" class="form-control" placeholder="Enter Your Price" name="Price" />
+        <br>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-success" />
+</form>
+
+
+
+
